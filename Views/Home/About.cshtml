@@ -1,1 +1,13 @@
+  <!-- 
+   ViewStart dosyasında bu blok olmasına rağmen herhangi bir view dosyasında yeniden çağrılırsa,
+   viewstart dosyasında bulunan ayarı ezer. Oradaki ayara göre default davranış Layout dosyasının kullanılması ise
+   burada bu blok ile LayoutAdmin dosyası verildiği zaman artık LayoutAdmin dosyası kullanılır. 
+
+   Bu durum yalnızca bu dosya özelindedir.
+  -->
+  
+  @{
+    Layout = "_LayoutAdmin";
+  }
+  
   <h1>Home/About</h1>
