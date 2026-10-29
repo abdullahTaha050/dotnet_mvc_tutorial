@@ -1,1 +1,13 @@
-  <h1>Products/Details</h1>
+@model Product
+
+<div class="row">
+  <div class="col-4">
+    <img src="~/img/@Model.Photo" alt="@Model.Title" class="img-fluid">
+  </div>
+  <div class="col-8">
+    <h2>@Model.Title</h2>
+    <p>@Model.Description</p>
+    <p>@Model.Price</p>
+    <p>@Model.IsSale</p>
+  </div>
+</div>
