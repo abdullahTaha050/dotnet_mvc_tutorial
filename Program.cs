@@ -18,6 +18,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//Statik dosyalar ile çalışabilmek için yazılmıştır. Daha doğrusu wwwroot klasörünü dışarıdan erişilebilir hale getirir.
 app.MapStaticAssets();
 
 app.MapControllerRoute(
