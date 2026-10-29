@@ -1,1 +1,9 @@
-<h1>Course/Index</h1>
+<h1 class="mb-4">Kurslar</h1>
+
+<div class="row kurslar">
+  @* 
+  - Bu metoda parametre olarak bu şekilde dosya adı verilebildiği gibi ~(option + N ile yapılır), 
+  - ~Views/Home/_CourseCard.cshtml şeklinde de parametre geçilebilir.
+  - ~ işareti kök dizini temsil eder. *@
+  @await Html.PartialAsync("_CourseCard")
+</div>
