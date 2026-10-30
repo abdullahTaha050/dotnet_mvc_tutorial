@@ -16,8 +16,11 @@
 
 <body>
   <header>
-    <!-- Partial view kullanım örneği. parametre olarak dosya adı uzantısız şekilde verilir.  -->
+    <!-- Partial view kullanım örneği. parametre olarak dosya adı uzantısız şekilde verilir.
+    kılavuz olması açısından üç farklı örnek eklenmiştir.  -->
     @await Html.PartialAsync("_Navbar")
+    @* @await Html.PartialAsync("~/Views/Shared/Partials/_Topbar.cshtml") *@
+    @* @await Html.PartialAsync("Partials/_Topbar.cshtml") *@
   </header>
 
   <main class="container my-3">
