@@ -8,6 +8,13 @@
     <h2>@Model.Title</h2>
     <p>@Model.Description</p>
     <p>@Model.Price</p>
-    <p>@Model.IsSale</p>
+    @if(@Model.IsSale)
+    {
+      <p>Satışta</p>
+    }
+    else {
+      <p>Satışta değil</p>
+    }
+    
   </div>
 </div>

@@ -13,7 +13,12 @@ public class ProductsController : Controller
 
     public ActionResult List()
     {
-        return View(); // klasör: Views/Products/List.cshtml
+        List<Product> productList = new List<Product>{
+            new Product { Title = "Samsung S10", Description = "128 Gb telefon", IsSale = true, Photo = "1.jpg", Price = 20},
+            new Product { Title = "iPhone Duo", Description = "512 Gb telefon", IsSale = true, Photo = "2.jpg", Price = 30},
+        };
+
+        return View(productList); // klasör: Views/Products/List.cshtml
     }
 
     public ActionResult Details()
