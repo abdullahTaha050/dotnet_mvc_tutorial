@@ -1,10 +1,15 @@
 @* Burada loop kullanmak için ienumerable kullanmak gerekli. zaten makbul olan da onu kullanmak.  *@
 @model List<Course>
 
+<h1 class="mt-2 mb-4">Tüm Kurslar</h1>
+
 <div class="row">
-  <div class="col">
-    <div class="card">
-      <img src="~/img/@Model." alt="">
+  @foreach (Course course in @Model)
+  {
+
+    <div class="col-md-6">
+      @await Html.PartialAsync("_CourseCard", course)
     </div>
-  </div>
+    
+  }
 </div>

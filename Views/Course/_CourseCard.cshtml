@@ -1,9 +1,11 @@
+@model Course
+
 <div class="col">
   <div class="card">
     @* Statik dosya kullanım örneği. yine tilda işareti ile ilgili dizin yazılır ve dosyaya ulaşılır. *@
-    <img src="~/img/1.jpg" class="card-img-top" alt="" srcset="">
+    <img src="~/img/@Model.Image" class="card-img-top" alt="" srcset="">
     <div class="card-body">
-      <h5 class="card-title">Lorem, ipsum.</h5>
+      <h5 class="card-title">@Model.Title</h5>
       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt!</p>
       <a href="#" class="card-link">İncele</a>
     </div>

@@ -6,10 +6,23 @@ namespace mvc_project.Controllers;
 public class CourseController : Controller
 {
 
+    List<Course> courseList = [new Course
+        {
+            Image = "3.jpg",
+            Title = ".Net Core Kursu",
+            IsHome = false
+        }, new Course
+        {
+            Image = "1.jpg",
+            Title = "Java Kursu",
+            IsHome = true
+        }];
+
     // /course veya /course/index
     public ActionResult Index()
     {
-        return View(); // klasör: Views/Course/Index.cshtml
+
+        return View(courseList); // klasör: Views/Course/Index.cshtml
     }
 
     public ActionResult Details()
@@ -25,19 +38,6 @@ public class CourseController : Controller
 
     public ActionResult List()
     {
-        Course course1 = new Course
-        {
-            Image = "1.jpg",
-            Title = "Java Kursu"
-        };
-
-        Course course2 = new Course
-        {
-            Image = "3.jpg",
-            Title = ".Net Core Kursu"
-        };
-
-        List<Course> courseList = [course1, course2];
 
         return View(courseList); // klasör: Views/Course/List.cshtml
     }
