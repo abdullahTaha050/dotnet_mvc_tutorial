@@ -8,6 +8,7 @@
   {
 
     <div class="col-md-6">
+      @* partial view bir veri bekliyorsa, çağırıldığı yerde ikinci parametre olarak veri göndermek mümkündür. *@
       @await Html.PartialAsync("_CourseCard", course)
     </div>
     

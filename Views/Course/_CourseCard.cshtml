@@ -7,7 +7,7 @@
     <div class="card-body">
       <h5 class="card-title">@Model.Title</h5>
       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nesciunt!</p>
-      <a href="#" class="card-link">İncele</a>
+      <a asp-controller="Course" asp-action="Details" asp-route-id="@Model.Id" class="card-link">İncele</a>
     </div>
   </div>
 </div>

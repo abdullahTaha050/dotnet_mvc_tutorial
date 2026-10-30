@@ -6,13 +6,15 @@ namespace mvc_project.Controllers;
 public class CourseController : Controller
 {
 
-    List<Course> courseList = [new Course
+    readonly List<Course> courseList = [new Course
         {
+            Id= 1,
             Image = "3.jpg",
             Title = ".Net Core Kursu",
             IsHome = false
         }, new Course
         {
+            Id =2,
             Image = "1.jpg",
             Title = "Java Kursu",
             IsHome = true
@@ -25,13 +27,9 @@ public class CourseController : Controller
         return View(courseList); // klasör: Views/Course/Index.cshtml
     }
 
-    public ActionResult Details()
+    public ActionResult Details(int id)
     {
-        Course course = new Course
-        {
-            Title = "React Kursu",
-            Image = "1.jpg"
-        };
+        Course course = courseList.FirstOrDefault(x => x.Id == id);
 
         return View(course);
     }
